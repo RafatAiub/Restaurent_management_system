@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Foodilite | Reservation</title>
+    <link href="//db.onlinewebfonts.com/c/465b1cbe35b5ca0de556720c955abece?family=AbolitionW00-Regular" rel="stylesheet"
+        type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Foodilite</title>
+</head>
+
+<body data-aos-easing="ease-out-back" data-aos-duration="1500" data-aos-delay="0">
+    <nav class="navbar navbar-expand-md navbar-dark position-sticky-top fixed-top">
+        <div class="canvas-area">
+            <div class="head1">
+                <a class="navbar-logo" href="#"><img src="img/logo.png"
+                        style="height:35px; width: 214px;padding-top:1px"> </a></div>
+            <div class="flot">
+                <button class="navbar-toggler" type="button " style="float: right" data-toggle="collapse"
+                    data-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse text-right" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.php">menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservation.php">reservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user.php">menu
+                            <p><?php
+            $query1="select name from reservation where email='$email'";
+            $nameg = oci_parse($conn,$query1);
+            while ($row = oci_fetch_assoc($nameg)) {
+                echo $row['name']."<br>";
+            }?></p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	
+	</body>
+</html>
